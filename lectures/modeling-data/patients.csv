@@ -1,0 +1,5 @@
+"id","name","illness","cured","room_id"
+"1","Ozzy Osbourne","dementia","false","1"
+"2","Marcos Andre","","true","1"
+"3","Lady Gaga","sore throat","false","2"
+"4","David Pessanha","Headache","false","2"
