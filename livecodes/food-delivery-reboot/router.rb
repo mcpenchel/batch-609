@@ -1,7 +1,9 @@
 class Router
 
-  def initialize
+  def initialize(meals_controller, customers_controller)
     @running = true
+    @meals_controller = meals_controller
+    @customers_controller = customers_controller
   end
 
   def run
@@ -22,10 +24,10 @@ class Router
 
   def route_to(user_option)
     case user_option
-    when 1 then puts "TO-DO: List all meals"
-    when 2 then puts "TO-DO: Create a meal"
-    when 3 then puts "TO-DO: List all customers"
-    when 4 then puts "TO-DO: Create a customer"
+    when 1 then @meals_controller.list
+    when 2 then @meals_controller.add
+    when 3 then @customers_controller.list
+    when 4 then @customers_controller.add
     when 5 then @running = false
     else
       puts "Invalid option, please choose a valid one."
