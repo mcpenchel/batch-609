@@ -1,6 +1,11 @@
+# Naming conventions:
+# file -> TIMESTAMP_lower_snake_case in plural
+# ex: 20210510092827_create_restaurants.rb
+# class -> UpperCamelCase in plural
+# ex: CreateRestaurants
+
 class CreateRestaurants < ActiveRecord::Migration[6.0]
-  # If it's not change,
-  # nothing will work.
+  # Sacred method name!! Change
   def change
     # the symbol is the table_name (always in plural!!!)
     create_table :restaurants do |t|
