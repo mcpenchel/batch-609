@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/application.css">
+
+<h1>Welcome to the Sexy Star Restaurants!</h1>
+
+<% "this is executing ruby code without printing it" %>
+<%= "this is executing ruby code and printing it" %>
+
+<!-- 
+  action in the form is the URL where it will make the request to
+  method in the form is the HTTP verb that the request will be made
+  PS: by default, forms only accept POST and GET
+  PS2: in Rails, JS will enable PUT/PATCH/DELETE verbs as well
+-->
+<form action="/restaurants" method="POST">
+  <input type="text" name="name" placeholder="Type the name in here...">
+  <input type="text" name="address" placeholder="Type the address in here..">
+  <input type="number" name="capacity">
+
+  <input type="submit" value="Create Restaurant">
+</form>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a></li>
+  <% end %>
+</ul>
