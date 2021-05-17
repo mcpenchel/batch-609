@@ -39,7 +39,7 @@ const blackSabbath = [ "Ozzy Osbourne", "Tony Iommi", "Gerard Butler", "Bill War
 blackSabbath[0]
 
 // updating
-blackSabbath[1] = "Dio"
+blackSabbath[0] = "Dio"
 
 // pushing
 blackSabbath.push("Kelly Key")
