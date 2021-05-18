@@ -1,13 +1,6 @@
-// todo
-
 const hintButton = document.querySelector('#show-hint');
 const hintDiv    = document.querySelector('.hint');
-
-hintButton.addEventListener('click', (event) => {
-  hintDiv.classList.toggle('active');
-})
-
-// Functions: (1) can/need to move; (2) swap/move the tiles
+const allTiles = document.querySelectorAll('td');
 
 const moveTile = (tile, emptyTile) => {
   tile.classList.add('empty');
@@ -33,13 +26,27 @@ const canMove = (tile, emptyTile) => {
   }
 }
 
-const allTiles = document.querySelectorAll('td');
-allTiles.forEach((tile) => {
-  tile.addEventListener('click', (event) => {
-    let emptyTile = document.querySelector('.empty');
+const move = (event) => {
+  const tile = event.currentTarget;
+  const emptyTile = document.querySelector('.empty');
 
-    if (canMove(tile, emptyTile)) {
-      moveTile(tile, emptyTile);
-    }
-  })
+  if (canMove(tile, emptyTile)) {
+    moveTile(tile, emptyTile);
+  }
+}
+
+allTiles.forEach((tile) => {
+  // Old version!
+  // tile.addEventListener('click', (event) => {
+  //   const emptyTile = document.querySelector('.empty');
+
+  //   if (canMove(tile, emptyTile)) {
+  //     moveTile(tile, emptyTile);
+  //   }  
+  // });
+  tile.addEventListener('click', move);
+})
+
+hintButton.addEventListener('click', (event) => {
+  hintDiv.classList.toggle('active');
 })
