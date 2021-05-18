@@ -3,20 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <title>Playground - JavaScript 101</title>
+    <style>
+      .red {
+        color: red;
+      }
+
+      .img-circle {
+        border-radius: 50%;
+      }
+    </style>
   </head>
   <body>
-    <div style="text-align: center;">
-      <p style="margin-top: 20vh; font: normal 24px monospace;">
-        Open the console 🤓
-      </p>
+    <p style="margin-top: 40vh; text-align: center; font: normal 24px monospace;">
+      Open the console 🤓
+    </p>
 
-      <!-- Add some HTML in here -->
-      <p class="red">A red paragraph</p>
+    <!-- Add some HTML in here -->
+    <div style="text-align: center; font: normal 24px monospace;">
+      <p class="red">In a galaxy far, far away...</p>
 
       <ul id="players">
-        <li class="green">Darth Sidious</li>
-        <li class="red">Count Dooku</li>
-        <li class="yellow">General Grievous</li>
+        <li class="green">Palpatine</li>
+        <li class="red">Vader</li>
       </ul>
 
       <ol id="fifa-wins">
@@ -27,19 +35,17 @@
         <li>Uruguay (2 wins)</li>
       </ol>
 
-      <input name="email" id="email" value="matheus.penchel@gmail.com" />
-      <br><br>
-      <a href="https://www.mastodonrocks.com/" id="home">Mastodon <em>rocks</em></a>
-      <br><br>
-      <div id="user" data-uid="2471555" data-github-nickname="Papillard">
-        Boris Paillard
-      </div>
-      <br><br>
-      <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard"
-      id="romain" height="200" alt="Romain Paillard" />
-      <img src="https://kitt.lewagon.com/placeholder/users/Papillard"
-      id="boris" height="200" alt="Boris Paillard" />
+      <input name="email" id="email" value="paul@gmail.com" />
 
+      <a href="https://www.lewagon.com" id="home">Le Wagon <em>rocks</em></a>
+
+      <button id="excluir">Excluir</button>
+      <div id="name" data-banda-favorita="Mastodon" data-time="Botafogo">Matheus Penchel</div>
+
+      <img src="https://kitt.lewagon.com/placeholder/users/monsieurpaillard"
+        id="romain" height="200" alt="Romain Paillard" />
+      <img src="https://kitt.lewagon.com/placeholder/users/Papillard"
+        id="boris" height="200" alt="Boris Paillard" />
     </div>
 
     <script src="main.js"></script>
